@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:900');
+
+
+
+:root{
+    --background: #0c0c0e;
+    --font-color: #fff;
+    
+    
+}
+
+/*Home Page Engine*/
+html, body{
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    color: var(--font-color);
+
+
+}
+/******************************************************/
+
+
+/*Slide One*/
+
+
+/*This makes the navbar stay on top of homepage*/
+#center-home{
+    position: absolute;
+    left: 0;
+    right: 0;
+     
+ }
+
+/*background Image full Screen*/
+#arrow{
+    background-image: url('field.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+}
+
+/*Overlay to make homescreen picture darker*/
+#arrow:before{
+    content:'';
+    position: absolute;
+    
+    left: 0;
+    bottom: 0;
+    height: 400px;
+    width: 100%;
+    
+    z-index: 1;
+    background: linear-gradient(to top, #0c0c0e, transparent);
+}
+
+#center-home{
+    position: absolute;
+    left: 0;
+    right: 0;
+     
+ }
+
+#hamburger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+    
+}
+
+.overlay{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay a{
+    display: block;
+    font-size: 36px;
+    margin: 30px;
+    transition: 0.5s;
+}
+
+.close-hamburger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+.buttonC{
+    padding: 5px;
+    top: 40px;
+    right: 40px;
+    border-radius: 30px;
+    background-color: transparent;
+    filter: invert(1); 
+}
+
+/******************************************************/
+
+
+/*This is what makes the video display*/
+
+.trailer{
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+.trailer.active{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    position: relative;
+    max-width: 950px;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.info{
+    max-width: 700px;
+}
+
+
+
+.close{
+
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    filter: invert(1); 
+
+}
+
+@media(max-width: 991px){
+
+    .trailer video{
+        
+        max-width: 90%;
+     
+    }
+
+}
+
+
+
+
+.navbar{
+    z-index: 2;
+}
+
+.show{
+    z-index: 2;
+}
+
+
+
+
+.show-title{
+    color: var(--font-color);
+}
+
+
+
+.bg-dark, .navbar-dark{
+    background-color: #674cda!important;
+}
+
+.btn-danger{
+    background-color: #674cda;
+    border-color:#674cda ;
+}
+
+.btn-danger:hover{
+    background-color: #674cda;
+    border-color: #674cda;
+}
+
+
+
+
+
+.overly{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -58px;
+    background-image: linear-gradient(to bottom, transparent, black);
+    padding: 29px 15px 10px;
+    transition: 0.5s;
+
+}
+
+
+
+.grid:hover .overly{
+    bottom: 0px;
+    transition: .5s;
+
+}
+
+.grid:hover .grid-img{
+    transform: scale(1.2);
+    transition: .5s;
+
+}
+
+.overly h2{ 
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--font-color);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+
+
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
+
+.logo{
+    width: 250px;
+    height: 260px;
+}
+
+
+
+
+.content{
+    width: 100%;
+    height: 90%;
+}
+
+.content img{
+    margin-bottom: 20px;
+}
+
+h1{
+    color: #674cda;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 500%;
+    line-height: .8
+}
+
+h3{
+    max-width: 700px;
+    font-size: 120%;
+    font-weight: 600;
+
+}
+
+.btn-outline-light{
+    padding: 15px;
+    border: 3px solid #fff;
+    border-radius: 40px;
+}
+
+
+
+.btn-outline-light:hover{
+    color:#674cda ;
+    background: rgba(0, 0, 0, 0.6);
+    border: 3px solid #674cda;
+
+}
+
+
+
+
+
+@media (max-width: 768px){
+    h1{
+        font-size: 350%;
+    }
+    h3{
+        font-size: 120%;
+        max-width: 100%;
+    }
+
+    .logo{
+        width: 220px;
+        height: 230px;
+    }
+
+
+    .grid-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
