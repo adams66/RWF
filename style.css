@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:900');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro&display=swap');
 
 
 
@@ -12,17 +12,97 @@
 /*Home Page Engine*/
 html, body{
     background-color: var(--background);
-    height: 100%;
     width: 100%;
-    font-family: sans-serif;
-    color: var(--font-color);
+    height: 100%;
+    
+    
 
 
 }
+
+#image-row{
+    width: 1000px;
+    
+ 
+}
+
+.box{
+    width: 100%;
+    height: 400px;
+}
+
+#bill{
+    height: 500px;
+    background-image: url('wildcat.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+
+
+.show-bottom{
+position: absolute;
+left: 0;
+bottom: 0;
+right: 0;
+width: 100%;
+height: 100px;
+background-image:  linear-gradient(to bottom, rgba(12, 12, 14, 0.3), rgba(12, 12, 14, 1));
+}
+
+.top{
+position: absolute;
+right: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-image:  linear-gradient(to top, rgba(12, 12, 14, 0.2), rgba(12, 12, 14, 1));
+
+}
+
+.bottom{
+position: absolute;
+right: 0;
+bottom: 0;
+width: 100%;
+height: 100%;
+background-image:  linear-gradient(to bottom, rgba(12, 12, 14, 0.1), rgba(12, 12, 14, 0.8));
+
+}
+
+
 /******************************************************/
 
 
 /*Slide One*/
+
+h1{
+    font-family: 'Libre Baskerville', serif; 
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--font-color);
+}
+a{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--font-color);
+}
+
+
 
 
 /*This makes the navbar stay on top of homepage*/
@@ -35,26 +115,15 @@ html, body{
 
 /*background Image full Screen*/
 #arrow{
+    position: relative;
     background-image: url('field.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
 }
 
 /*Overlay to make homescreen picture darker*/
-#arrow:before{
-    content:'';
-    position: absolute;
-    
-    left: 0;
-    bottom: 0;
-    height: 400px;
-    width: 100%;
-    
-    z-index: 1;
-    background: linear-gradient(to top, #0c0c0e, transparent);
-}
 
 #center-home{
     position: absolute;
@@ -72,8 +141,11 @@ html, body{
     
 }
 
+
+
 #hamburger-button{
-    background-color: white;
+  background-color: transparent;
+  border-color: transparent;
     
 }
 
@@ -104,6 +176,21 @@ html, body{
     position: absolute;
     top: 40px;
     right: 40px;
+}
+
+
+
+
+.nav-item a{
+    transition: all .2s ease-in-out;
+    font-weight: 800;
+}
+
+.nav-item a:hover{
+    color: #674cda;
+    transform: scale(1.2);
+    
+    
 }
 
 /******************************************************/
@@ -143,18 +230,13 @@ html, body{
 
 
 
-
-
-
-
-
-
-
-
-
+/*******************/
+/*Description Sections Text*/
 .info{
-    max-width: 700px;
+    max-width: 600px;
 }
+
+/*******************/
 
 
 
@@ -180,116 +262,8 @@ html, body{
 
 
 
-.navbar{
-    z-index: 2;
-}
-
-.show{
-    z-index: 2;
-}
-
-
-
-
-.show-title{
-    color: var(--font-color);
-}
-
-
-
-.bg-dark, .navbar-dark{
-    background-color: #674cda!important;
-}
-
-.btn-danger{
-    background-color: #674cda;
-    border-color:#674cda ;
-}
-
-.btn-danger:hover{
-    background-color: #674cda;
-    border-color: #674cda;
-}
-
-
-
-
-
-.overly{
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    bottom: -58px;
-    background-image: linear-gradient(to bottom, transparent, black);
-    padding: 29px 15px 10px;
-    transition: 0.5s;
-
-}
-
-
-
-.grid:hover .overly{
-    bottom: 0px;
-    transition: .5s;
-
-}
-
-.grid:hover .grid-img{
-    transform: scale(1.2);
-    transition: .5s;
-
-}
-
-.overly h2{ 
-    font-size: 16px;
-    text-transform: uppercase;
-    color: var(--font-color);
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-
-
-
-@keyframes fadeInAnimation { 
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-     } 
-} 
-
-.logo{
-    width: 250px;
-    height: 260px;
-}
-
-
-
-
-.content{
-    width: 100%;
-    height: 90%;
-}
-
-.content img{
-    margin-bottom: 20px;
-}
-
-h1{
-    color: #674cda;
-    font-family: 'Alegreya Sans', sans-serif;
-    font-size: 500%;
-    line-height: .8
-}
-
-h3{
-    max-width: 700px;
-    font-size: 120%;
-    font-weight: 600;
-
-}
+/*******************/
+/*Buttons*/
 
 .btn-outline-light{
     padding: 15px;
@@ -306,30 +280,16 @@ h3{
 
 }
 
+/*******************/
 
 
 
 
-@media (max-width: 768px){
-    h1{
-        font-size: 350%;
-    }
-    h3{
-        font-size: 120%;
-        max-width: 100%;
-    }
-
-    .logo{
-        width: 220px;
-        height: 230px;
-    }
 
 
-    .grid-section{
-        display: flex;
-        flex-direction: column;
-    }
 
-}
+
+
+
 
 
